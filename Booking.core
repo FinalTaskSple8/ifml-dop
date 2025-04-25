@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="ASCII"?>
+<core:IFMLModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.omg.org/spec/20130218/core" xmlns:ext="http://www.omg.org/spec/20130218/ext" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" id="_b3tRACHnEfCzhf4XM-sJtQ">
+  <interactionFlowModel id="_tY_hACHoEfCzhf4XM-sJtQ">
+    <interactionFlowModelElements xsi:type="core:ModuleDefinition" id="_2JftUCHoEfCzhf4XM-sJtQ" name="Booking">
+      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_tamqkCHoEfCzhf4XM-sJtQ" name="Booking Page">
+        <viewElements xsi:type="ext:Form" id="_hvCl4CHpEfCzhf4XM-sJtQ" name="Booking Form">
+          <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_6mA_ICHsEfCzhf4XM-sJtQ" name="Send">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_H8nM0CHtEfCzhf4XM-sJtQ" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1"/>
+          </viewElementEvents>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_sjbVgCHpEfCzhf4XM-sJtQ" name="Booking Id">
+            <annotations text="Required"/>
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_GcskICHrEfCzhf4XM-sJtQ" name="bookingId"/>
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </viewComponentParts>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_Dq5nYCHqEfCzhf4XM-sJtQ" name="User Id">
+            <annotations text="Required"/>
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_d6SP8CHrEfCzhf4XM-sJtQ" name="userId"/>
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </viewComponentParts>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_f-bHYCHqEfCzhf4XM-sJtQ" name="Hotel Id">
+            <annotations text="Required"/>
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_lU0H0CHrEfCzhf4XM-sJtQ" name="hotelId"/>
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </viewComponentParts>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_qYn1YCHqEfCzhf4XM-sJtQ" name="Check In Date">
+            <annotations text="Required"/>
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_ojo0QCHrEfCzhf4XM-sJtQ" name="checkInDate"/>
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+          </viewComponentParts>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_1Fb9YCHqEfCzhf4XM-sJtQ" name="Check Out Date">
+            <annotations text="Required"/>
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_r4PYkCHrEfCzhf4XM-sJtQ" name="checkOutDate"/>
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+          </viewComponentParts>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_v7hn0CHrEfCzhf4XM-sJtQ" name="Number of Guests">
+            <annotations text="Required"/>
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_zr9zkCHrEfCzhf4XM-sJtQ" name="numberOfGuests"/>
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </viewComponentParts>
+        </viewElements>
+        <viewElements xsi:type="core:ViewComponent" id="_XckTsCHtEfCzhf4XM-sJtQ" name="Booking Summary" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@actionEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@actions.1/@outInteractionFlows.0">
+          <viewElementEvents xsi:type="ext:OnSelectEvent" id="_u7M2cCHvEfCzhf4XM-sJtQ" name="Cancel Booking">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_1kGdECHvEfCzhf4XM-sJtQ" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@actions.0"/>
+          </viewElementEvents>
+          <viewComponentParts xsi:type="core:DataBinding" id="__MIR0CHwEfCzhf4XM-sJtQ" name="Booking Summary Data" uniformResourceIdentifier="">
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_NMnKACHxEfCzhf4XM-sJtQ" name="totalPrice" featureConcept="//@domainModel/@domainElements.7"/>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_YF_HUCHxEfCzhf4XM-sJtQ" name="status" featureConcept="//@domainModel/@domainElements.8"/>
+          </viewComponentParts>
+        </viewElements>
+        <actions id="_6zyDcCHuEfCzhf4XM-sJtQ" name="Cancel Booking" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@viewElementEvents.0/@outInteractionFlows.0">
+          <annotations text="DELETE"/>
+        </actions>
+        <actions id="_GzRe0CHwEfCzhf4XM-sJtQ" name="View Booking Details">
+          <annotations text="GET"/>
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_OXsSgCHwEfCzhf4XM-sJtQ" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1"/>
+        </actions>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_lmxlECHsEfCzhf4XM-sJtQ" name="Create Booking" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="POST"/>
+        <actionEvents id="_l24ywCHuEfCzhf4XM-sJtQ">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_rssIgCHuEfCzhf4XM-sJtQ" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1"/>
+        </actionEvents>
+      </interactionFlowModelElement>
+    </interactionFlowModelElements>
+  </interactionFlowModel>
+  <domainModel id="_b39IoCHnEfCzhf4XM-sJtQ">
+    <domainElements xsi:type="core:UMLDomainConcept" id="_b5eLkCHnEfCzhf4XM-sJtQ" name="BookingImpl">
+      <classifier xsi:type="uml:Class" href="../Booking/Booking.uml#_cELu8CG0EfCZv9388zi2Ug"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_b6bN0CHnEfCzhf4XM-sJtQ" name="bookingId">
+      <structuralFeature xsi:type="uml:Property" href="../Booking/Booking.uml#_PVG3cCG4EfCZv9388zi2Ug"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_b6b04CHnEfCzhf4XM-sJtQ" name="userId">
+      <structuralFeature xsi:type="uml:Property" href="../Booking/Booking.uml#_h_ONMCG4EfCZv9388zi2Ug"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_b6b04SHnEfCzhf4XM-sJtQ" name="hotelId">
+      <structuralFeature xsi:type="uml:Property" href="../Booking/Booking.uml#_1n9HUCG4EfCZv9388zi2Ug"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_b6b04iHnEfCzhf4XM-sJtQ" name="checkInDate">
+      <structuralFeature xsi:type="uml:Property" href="../Booking/Booking.uml#_Bwb8ECG5EfCZv9388zi2Ug"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_b6b04yHnEfCzhf4XM-sJtQ" name="checkOutDate">
+      <structuralFeature xsi:type="uml:Property" href="../Booking/Booking.uml#_ByackCG6EfCZv9388zi2Ug"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_b6b05CHnEfCzhf4XM-sJtQ" name="numberOfGuests">
+      <structuralFeature xsi:type="uml:Property" href="../Booking/Booking.uml#_RyE-QCG6EfCZv9388zi2Ug"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_b6b05SHnEfCzhf4XM-sJtQ" name="totalPrice">
+      <structuralFeature xsi:type="uml:Property" href="../Booking/Booking.uml#_WlPLQCG6EfCZv9388zi2Ug"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_b6b05iHnEfCzhf4XM-sJtQ" name="status">
+      <structuralFeature xsi:type="uml:Property" href="../Booking/Booking.uml#_bm1c4CG6EfCZv9388zi2Ug"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_b7Wa4CHnEfCzhf4XM-sJtQ" name="createBooking">
+      <behavioralFeature xsi:type="uml:Operation" href="../Booking/Booking.uml#_k7NyUCG6EfCZv9388zi2Ug"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_b7Wa4SHnEfCzhf4XM-sJtQ" name="cancelBooking">
+      <behavioralFeature xsi:type="uml:Operation" href="../Booking/Booking.uml#_jSAjYCG7EfCZv9388zi2Ug"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_b7Wa4iHnEfCzhf4XM-sJtQ" name="calculateTotalPrice">
+      <behavioralFeature xsi:type="uml:Operation" href="../Booking/Booking.uml#_ooMk8CG7EfCZv9388zi2Ug"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_b7Wa4yHnEfCzhf4XM-sJtQ" name="viewBookingDetails">
+      <behavioralFeature xsi:type="uml:Operation" href="../Booking/Booking.uml#_wmkJsCG7EfCZv9388zi2Ug"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_b7Wa5CHnEfCzhf4XM-sJtQ" name="BookingImpl">
+      <classifier xsi:type="uml:Class" href="../Booking/Booking.uml#_ZzFGoCHCEfC-JftuIyKvKw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_b7Wa5SHnEfCzhf4XM-sJtQ" name="bookingimpl">
+      <structuralFeature xsi:type="uml:Property" href="../Booking/Booking.uml#_rqdX4CHCEfC-JftuIyKvKw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_b7Wa5iHnEfCzhf4XM-sJtQ" name="upgradedRoomType">
+      <structuralFeature xsi:type="uml:Property" href="../Booking/Booking.uml#_JEJ1wCHDEfC-JftuIyKvKw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_b7Wa5yHnEfCzhf4XM-sJtQ" name="upgradeCost">
+      <structuralFeature xsi:type="uml:Property" href="../Booking/Booking.uml#_nAHTMCHDEfC-JftuIyKvKw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_b7Wa6CHnEfCzhf4XM-sJtQ" name="requestRoomUpgrade">
+      <behavioralFeature xsi:type="uml:Operation" href="../Booking/Booking.uml#_rIVFwCHDEfC-JftuIyKvKw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_b7Wa6SHnEfCzhf4XM-sJtQ" name="calculateTotalPrice">
+      <behavioralFeature xsi:type="uml:Operation" href="../Booking/Booking.uml#_XxDSkCHEEfC-JftuIyKvKw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_b7Wa6iHnEfCzhf4XM-sJtQ" name="BookingImpl">
+      <classifier xsi:type="uml:Class" href="../Booking/Booking.uml#_2r9rkCHEEfC-JftuIyKvKw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_b7XB8CHnEfCzhf4XM-sJtQ" name="earlyCheckIn">
+      <structuralFeature xsi:type="uml:Property" href="../Booking/Booking.uml#_-rJvsCHEEfC-JftuIyKvKw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_b7XB8SHnEfCzhf4XM-sJtQ" name="lateCheckOut">
+      <structuralFeature xsi:type="uml:Property" href="../Booking/Booking.uml#_F2LzACHFEfC-JftuIyKvKw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_b7XB8iHnEfCzhf4XM-sJtQ" name="earlyCheckInFee">
+      <structuralFeature xsi:type="uml:Property" href="../Booking/Booking.uml#_NCu5QCHFEfC-JftuIyKvKw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_b7XB8yHnEfCzhf4XM-sJtQ" name="lateCheckOutFee">
+      <structuralFeature xsi:type="uml:Property" href="../Booking/Booking.uml#_Ro7oUCHFEfC-JftuIyKvKw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_b7XB9CHnEfCzhf4XM-sJtQ" name="bookingimpl">
+      <structuralFeature xsi:type="uml:Property" href="../Booking/Booking.uml#_6aFbwiHHEfC-JftuIyKvKw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_b7XB9SHnEfCzhf4XM-sJtQ" name="requestEarlyCheckIn">
+      <behavioralFeature xsi:type="uml:Operation" href="../Booking/Booking.uml#_X1HdwCHFEfC-JftuIyKvKw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_b7XB9iHnEfCzhf4XM-sJtQ" name="requestLateCheckOut">
+      <behavioralFeature xsi:type="uml:Operation" href="../Booking/Booking.uml#_hQaTgCHFEfC-JftuIyKvKw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_b7XB9yHnEfCzhf4XM-sJtQ" name="calculateTotalPrice">
+      <behavioralFeature xsi:type="uml:Operation" href="../Booking/Booking.uml#_oA5I0CHFEfC-JftuIyKvKw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_b7XB-CHnEfCzhf4XM-sJtQ" name="BookingImpl">
+      <classifier xsi:type="uml:Class" href="../Booking/Booking.uml#_CeAg0CHGEfC-JftuIyKvKw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_b7XB-SHnEfCzhf4XM-sJtQ" name="additionalServices">
+      <structuralFeature xsi:type="uml:Property" href="../Booking/Booking.uml#_Ht67QCHGEfC-JftuIyKvKw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_b7XB-iHnEfCzhf4XM-sJtQ" name="servicesCost">
+      <structuralFeature xsi:type="uml:Property" href="../Booking/Booking.uml#__vEY4CHGEfC-JftuIyKvKw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_b7XB-yHnEfCzhf4XM-sJtQ" name="bookingimpl">
+      <structuralFeature xsi:type="uml:Property" href="../Booking/Booking.uml#_vUlmoCHKEfCloo28XAmXCg"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_b7XB_CHnEfCzhf4XM-sJtQ" name="addService">
+      <behavioralFeature xsi:type="uml:Operation" href="../Booking/Booking.uml#_FNAoQCHHEfC-JftuIyKvKw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_b7XB_SHnEfCzhf4XM-sJtQ" name="calculateTotalPrice">
+      <behavioralFeature xsi:type="uml:Operation" href="../Booking/Booking.uml#_UeenMCHHEfC-JftuIyKvKw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_b7XB_iHnEfCzhf4XM-sJtQ" name="bookingimpl">
+      <structuralFeature xsi:type="uml:Property" href="../Booking/Booking.uml#_rqd-8iHCEfC-JftuIyKvKw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_b7XB_yHnEfCzhf4XM-sJtQ" name="bookingimpl">
+      <structuralFeature xsi:type="uml:Property" href="../Booking/Booking.uml#_6aGC0iHHEfC-JftuIyKvKw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_b7XCACHnEfCzhf4XM-sJtQ" name="bookingimpl">
+      <structuralFeature xsi:type="uml:Property" href="../Booking/Booking.uml#_vUm0wSHKEfCloo28XAmXCg"/>
+    </domainElements>
+  </domainModel>
+</core:IFMLModel>
