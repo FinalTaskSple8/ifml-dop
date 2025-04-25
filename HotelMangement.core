@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="ASCII"?>
+<core:IFMLModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.omg.org/spec/20130218/core" xmlns:ext="http://www.omg.org/spec/20130218/ext" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" id="_l64n8CGsEfC5EsruAykNQw">
+  <interactionFlowModel id="_6e12YCG7EfC5EsruAykNQw">
+    <interactionFlowModelElements xsi:type="core:ModuleDefinition" id="_kw678CG8EfC5EsruAykNQw" name="Hotel Management">
+      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_6e5gwCG7EfC5EsruAykNQw" name="Manage Hotel Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.4/@outInteractionFlows.0">
+        <annotations text="/manage-hotel"/>
+        <viewElements xsi:type="ext:List" id="_eGfrUCG8EfC5EsruAykNQw" name="List Hotel">
+          <viewElementEvents xsi:type="ext:OnSelectEvent" id="_qo24UCG_EfC5EsruAykNQw" name="SelectHotel">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_jEqRoCHAEfC5EsruAykNQw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1"/>
+          </viewElementEvents>
+          <viewElementEvents xsi:type="ext:OnSelectEvent" id="_rA89UCHBEfC5EsruAykNQw" name="AddHotel">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_1DEFACHNEfC5EsruAykNQw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.3"/>
+          </viewElementEvents>
+          <viewComponentParts xsi:type="core:DataBinding" id="_Dkk2YCG9EfC5EsruAykNQw" name="Hotel data">
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_Z0EXYCG9EfC5EsruAykNQw" name="name" featureConcept="//@domainModel/@domainElements.4"/>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_ghq30CG9EfC5EsruAykNQw" name="location" featureConcept="//@domainModel/@domainElements.5"/>
+          </viewComponentParts>
+        </viewElements>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_aoFt8CHAEfC5EsruAykNQw" name="Open Room By Hotel" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_vbB78CHBEfC5EsruAykNQw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2"/>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_k_1k4CHAEfC5EsruAykNQw" name="Manage Room Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.6/@outInteractionFlows.0">
+        <annotations text="/manage-hotel/{hotelId}/rooms"/>
+        <viewElements xsi:type="ext:List" id="_6TvAUCHAEfC5EsruAykNQw" name="List Room">
+          <viewComponentParts xsi:type="core:DataBinding" id="_98cMYCHAEfC5EsruAykNQw" name="Room Data">
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_Cz31YCHBEfC5EsruAykNQw" name="number" featureConcept="//@domainModel/@domainElements.22"/>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_Yy4qYCHBEfC5EsruAykNQw" name="type" featureConcept="//@domainModel/@domainElements.23"/>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_brWsUCHBEfC5EsruAykNQw" name="price" featureConcept="//@domainModel/@domainElements.24"/>
+          </viewComponentParts>
+        </viewElements>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_cLAVYCHEEfC5EsruAykNQw" name="Add Hotel Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewElementEvents.1/@outInteractionFlows.0">
+        <annotations text="/manage-hotel/add"/>
+        <viewElements xsi:type="ext:Form" id="_e0mN0CHEEfC5EsruAykNQw" name="Add Hotel">
+          <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_o6ki0CHFEfC5EsruAykNQw" name="Send">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_u2z3wCHFEfC5EsruAykNQw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.4"/>
+          </viewElementEvents>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_38Hr4CHEEfC5EsruAykNQw" name="name">
+            <annotations text="Required"/>
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_PhMfwCHFEfC5EsruAykNQw" name="name"/>
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </viewComponentParts>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_boC80CHFEfC5EsruAykNQw" name="location">
+            <annotations text="Required"/>
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_ixVTsCHFEfC5EsruAykNQw" name="location"/>
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </viewComponentParts>
+        </viewElements>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_sC_FQCHFEfC5EsruAykNQw" name="Save Hotel" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.3/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_v_J_4CHFEfC5EsruAykNQw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_DigY0CHIEfC5EsruAykNQw" name="ViewContainer">
+        <annotations text="/manage-hotel/{hotelId}/rooms/add"/>
+        <viewElements xsi:type="ext:Form" id="_FgrVsCHIEfC5EsruAykNQw" name="Add Room">
+          <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_v0v_UCHIEfC5EsruAykNQw" name="Send">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_0BJHQCHIEfC5EsruAykNQw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.6"/>
+          </viewElementEvents>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_MKJkECHIEfC5EsruAykNQw" name="number">
+            <annotations text="Required"/>
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_RfreUCHIEfC5EsruAykNQw" name="number"/>
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </viewComponentParts>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_ZBC-ACHIEfC5EsruAykNQw" name="type">
+            <annotations text="Required"/>
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_difI4CHIEfC5EsruAykNQw" name="type"/>
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </viewComponentParts>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_k88vUCHIEfC5EsruAykNQw" name="price">
+            <annotations text="Required"/>
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_pACxUCHIEfC5EsruAykNQw" name="price"/>
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </viewComponentParts>
+        </viewElements>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_xf884CHIEfC5EsruAykNQw" name="Save Room" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.5/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_0jowUCHIEfC5EsruAykNQw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2"/>
+      </interactionFlowModelElement>
+    </interactionFlowModelElements>
+  </interactionFlowModel>
+  <domainModel id="_l64n8SGsEfC5EsruAykNQw">
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_l7AjwCGsEfC5EsruAykNQw" name="managehotelsimpl">
+      <structuralFeature xsi:type="uml:Property" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_KjUoECE3EfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_l7Bx4CGsEfC5EsruAykNQw" name="manageroomsimpl">
+      <structuralFeature xsi:type="uml:Property" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_78oIMSGpEfC5EsruAykNQw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_l7DnECGsEfC5EsruAykNQw" name="ManageHotelsImpl">
+      <classifier xsi:type="uml:Class" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_dvK6ECEEEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_l7DnESGsEfC5EsruAykNQw" name="id">
+      <structuralFeature xsi:type="uml:Property" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_nG8hwCEEEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_l7DnEiGsEfC5EsruAykNQw" name="name">
+      <structuralFeature xsi:type="uml:Property" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_8vUL0CEZEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_l7DnEyGsEfC5EsruAykNQw" name="location">
+      <structuralFeature xsi:type="uml:Property" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_Eq0p0CEaEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_l7IfkCGsEfC5EsruAykNQw" name="addRoomToHotel">
+      <behavioralFeature xsi:type="uml:Operation" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_pFr60CEOEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_l7IfkSGsEfC5EsruAykNQw" name="ManageHotelsImpl">
+      <classifier xsi:type="uml:Class" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_YHyt8iEcEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_l7IfkiGsEfC5EsruAykNQw" name="id">
+      <structuralFeature xsi:type="uml:Property" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_YHyt8yEcEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_l7IfkyGsEfC5EsruAykNQw" name="name">
+      <structuralFeature xsi:type="uml:Property" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_YHyt9CEcEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_l7IflCGsEfC5EsruAykNQw" name="location">
+      <structuralFeature xsi:type="uml:Property" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_YHyt9SEcEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_l7IflSGsEfC5EsruAykNQw" name="addRoomToHotel">
+      <behavioralFeature xsi:type="uml:Operation" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_YHyt9yEcEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_l7IfliGsEfC5EsruAykNQw" name="ManageHotelsImpl">
+      <classifier xsi:type="uml:Class" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_YHyt-iEcEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_l7IflyGsEfC5EsruAykNQw" name="id">
+      <structuralFeature xsi:type="uml:Property" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_YHyt-yEcEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_l7IfmCGsEfC5EsruAykNQw" name="name">
+      <structuralFeature xsi:type="uml:Property" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_YHyt_CEcEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_l7IfmSGsEfC5EsruAykNQw" name="location">
+      <structuralFeature xsi:type="uml:Property" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_YHyt_SEcEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_l7IfmiGsEfC5EsruAykNQw" name="addRoomToHotel">
+      <behavioralFeature xsi:type="uml:Operation" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_YHyt_yEcEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_l7IfmyGsEfC5EsruAykNQw" name="ManageRoomsImpl">
+      <classifier xsi:type="uml:Class" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_ewGesCEcEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_l7IfnCGsEfC5EsruAykNQw" name="id">
+      <structuralFeature xsi:type="uml:Property" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_ewGesSEcEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_l7IfnSGsEfC5EsruAykNQw" name="name">
+      <structuralFeature xsi:type="uml:Property" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_ewGesiEcEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_l7IfniGsEfC5EsruAykNQw" name="location">
+      <structuralFeature xsi:type="uml:Property" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_ewGesyEcEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_l7IfnyGsEfC5EsruAykNQw" name="hotelId">
+      <structuralFeature xsi:type="uml:Property" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_7HqKICEcEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_l7IfoCGsEfC5EsruAykNQw" name="number">
+      <structuralFeature xsi:type="uml:Property" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_-ZQdwCEcEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_l7IfoSGsEfC5EsruAykNQw" name="type">
+      <structuralFeature xsi:type="uml:Property" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_lib4sCEdEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_l7IfoiGsEfC5EsruAykNQw" name="price">
+      <structuralFeature xsi:type="uml:Property" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_n4JL0CEdEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_l7IfoyGsEfC5EsruAykNQw" name="isAvailable">
+      <structuralFeature xsi:type="uml:Property" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_xms70CEdEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_l7IfpCGsEfC5EsruAykNQw" name="managehotelsimpl">
+      <structuralFeature xsi:type="uml:Property" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_78m6ECGpEfC5EsruAykNQw"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_l7IfpSGsEfC5EsruAykNQw" name="addRoomToHotel">
+      <behavioralFeature xsi:type="uml:Operation" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_ewGetSEcEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_l7IfpiGsEfC5EsruAykNQw" name="addRoom">
+      <behavioralFeature xsi:type="uml:Operation" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_qwQGwCEwEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_l7IfpyGsEfC5EsruAykNQw" name="deleteRoom">
+      <behavioralFeature xsi:type="uml:Operation" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_IRR7sCExEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_l7IfqCGsEfC5EsruAykNQw" name="getRoomByHotelId">
+      <behavioralFeature xsi:type="uml:Operation" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_XKfysCExEfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_l7IfqSGsEfC5EsruAykNQw" name="ManageHotelsImpl">
+      <classifier xsi:type="uml:Class" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_QNu4ECE1EfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_l7IfqiGsEfC5EsruAykNQw" name="managehotelsimpl">
+      <structuralFeature xsi:type="uml:Property" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_KjUBASE3EfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_l7IfqyGsEfC5EsruAykNQw" name="addHotel">
+      <behavioralFeature xsi:type="uml:Operation" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_jX1VcCE1EfCQGtWHGIhWjQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_l7JGoCGsEfC5EsruAykNQw" name="deleteHotel">
+      <behavioralFeature xsi:type="uml:Operation" href="../HotelManagement-uml-dop/HotelManagement-uml-dop.uml#_yvL58CE1EfCQGtWHGIhWjQ"/>
+    </domainElements>
+  </domainModel>
+</core:IFMLModel>
