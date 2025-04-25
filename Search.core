@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ASCII"?>
+<core:IFMLModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.omg.org/spec/20130218/core" xmlns:ext="http://www.omg.org/spec/20130218/ext" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" id="_o-kOoCGcEfC0m9OTpL2Vnw">
+  <interactionFlowModel id="_0jZjwCGcEfC0m9OTpL2Vnw">
+    <interactionFlowModelElements xsi:type="core:ModuleDefinition" id="__hoL4CGcEfC0m9OTpL2Vnw" name="Search">
+      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_FCDHgCGdEfC0m9OTpL2Vnw" name="Search Page">
+        <annotations text="/search"/>
+        <inInteractionFlows xsi:type="core:NavigationFlow" href="main.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElementEvents.0/@outInteractionFlows.0"/>
+        <viewElements xsi:type="ext:Form" id="_NWeb0CGdEfC0m9OTpL2Vnw" name="Search Form">
+          <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_VLaiUCGeEfC0m9OTpL2Vnw" name="Cari">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_prwZ4CGeEfC0m9OTpL2Vnw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2"/>
+          </viewElementEvents>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_TzLZgCGdEfC0m9OTpL2Vnw" name="Nama Hotel">
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_b3i4kCGdEfC0m9OTpL2Vnw" name="name">
+              <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+            </subViewComponentParts>
+          </viewComponentParts>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_UqDXICGdEfC0m9OTpL2Vnw" name="Lokasi Hotel">
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_nSlYgCGdEfC0m9OTpL2Vnw" name="location">
+              <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+            </subViewComponentParts>
+          </viewComponentParts>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_VRRvMCGdEfC0m9OTpL2Vnw" name="Tanggal Pemesanan">
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_tlLX8CGdEfC0m9OTpL2Vnw" name="date">
+              <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+            </subViewComponentParts>
+          </viewComponentParts>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_VwyVsCGdEfC0m9OTpL2Vnw" name="Jumlah Tamu">
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_Km1wUCGeEfC0m9OTpL2Vnw" name="guest">
+              <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+            </subViewComponentParts>
+          </viewComponentParts>
+        </viewElements>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_MKl3gCGdEfC0m9OTpL2Vnw" name="Search Result Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2/@actionEvents.0/@outInteractionFlows.0">
+        <annotations text="/search/result?name?location?date?guest"/>
+        <viewElements xsi:type="ext:List" id="_BMCNUCGfEfC0m9OTpL2Vnw" name="List Hotel">
+          <parameters id="_Pdd2ICGgEfC0m9OTpL2Vnw" name="name"/>
+          <parameters id="_PvASECGgEfC0m9OTpL2Vnw" name="location"/>
+          <parameters id="_P55TcCGgEfC0m9OTpL2Vnw" name="date"/>
+          <parameters id="_QLA4oCGgEfC0m9OTpL2Vnw" name="guest"/>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_COqvACGfEfC0m9OTpL2Vnw" name="Search"/>
+          <viewComponentParts xsi:type="core:DataBinding" id="_LBz_oCGfEfC0m9OTpL2Vnw" name="Search Hotel Data" uniformResourceIdentifier="/call/hotel/result">
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_mPVrcCGgEfC0m9OTpL2Vnw" name="Nama Hotel"/>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_3SGB0CGgEfC0m9OTpL2Vnw" name="Harga Hotel"/>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_5iZQgCGgEfC0m9OTpL2Vnw" name="hotelPictureUrl"/>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_HK67sCGhEfC0m9OTpL2Vnw" name="Lokasi Hotel"/>
+          </viewComponentParts>
+        </viewElements>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_dqmVICGeEfC0m9OTpL2Vnw" name="Search Hotel" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="POST"/>
+        <actionEvents id="_Usb_8CGhEfC0m9OTpL2Vnw">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_VxEswCGhEfC0m9OTpL2Vnw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1">
+            <parameterBindingGroup id="_XvpSQCGhEfC0m9OTpL2Vnw">
+              <parameterBindings id="_bAEhMCGhEfC0m9OTpL2Vnw" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@parameters.0"/>
+              <parameterBindings id="_bsiloCGhEfC0m9OTpL2Vnw" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@parameters.1" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@parameters.1"/>
+              <parameterBindings id="_b82SgCGhEfC0m9OTpL2Vnw" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@parameters.2" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@parameters.2"/>
+              <parameterBindings id="_cKRqgCGhEfC0m9OTpL2Vnw" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@parameters.3" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@parameters.3"/>
+            </parameterBindingGroup>
+          </outInteractionFlows>
+        </actionEvents>
+      </interactionFlowModelElement>
+    </interactionFlowModelElements>
+  </interactionFlowModel>
+  <domainModel id="_o-n5ACGcEfC0m9OTpL2Vnw">
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_o-8pICGcEfC0m9OTpL2Vnw" name="searchHotels">
+      <behavioralFeature xsi:type="uml:Operation" href="../Search/Search.uml#_9NU28CDsEfC6AqtRt3KP1g"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_o_HBMCGcEfC0m9OTpL2Vnw" name="SearchImpl">
+      <classifier xsi:type="uml:Class" href="../Search/Search.uml#_qi5isCDtEfC6AqtRt3KP1g"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_o_QyMCGcEfC0m9OTpL2Vnw" name="hotels">
+      <structuralFeature xsi:type="uml:Property" href="../Search/Search.uml#_6rZQQCDtEfC6AqtRt3KP1g"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_o_QyMSGcEfC0m9OTpL2Vnw" name="searchHotels">
+      <behavioralFeature xsi:type="uml:Operation" href="../Search/Search.uml#_DD9dsCDuEfC6AqtRt3KP1g"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_o_QyMiGcEfC0m9OTpL2Vnw" name="SearchImpl">
+      <classifier xsi:type="uml:Class" href="../Search/Search.uml#_76wJ4CDuEfC6AqtRt3KP1g"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_o_QyMyGcEfC0m9OTpL2Vnw" name="searchimpl">
+      <structuralFeature xsi:type="uml:Property" href="../Search/Search.uml#_UyJhQCDvEfC6AqtRt3KP1g"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_o_QyNCGcEfC0m9OTpL2Vnw" name="logSearch">
+      <behavioralFeature xsi:type="uml:Operation" href="../Search/Search.uml#_Ctnk0CDvEfC6AqtRt3KP1g"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_o_QyNSGcEfC0m9OTpL2Vnw" name="searchimpl">
+      <structuralFeature xsi:type="uml:Property" href="../Search/Search.uml#_UyLWcCDvEfC6AqtRt3KP1g"/>
+    </domainElements>
+  </domainModel>
+</core:IFMLModel>
