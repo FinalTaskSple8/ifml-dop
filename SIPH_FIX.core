@@ -11,7 +11,7 @@
       </viewElementEvents>
     </interactionFlowModelElements>
     <interactionFlowModelElements xsi:type="core:ModuleDefinition" id="_6VWVMCc3EfCawJ8zG0FM2w" name="Profile">
-      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_vaPfsCHrEfC09_PHvSMwwg" name="Edit Profile Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.2/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_vaPfsCHrEfC09_PHvSMwwg" name="Edit Profile Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.2/@interactionFlowModelElement.1/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="/profile/edit"/>
         <viewElements xsi:type="ext:Form" id="_7ya9UCHrEfC09_PHvSMwwg" name="Form">
           <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_iujawCHsEfC09_PHvSMwwg" name="Send">
@@ -43,10 +43,10 @@
       </interactionFlowModelElement>
       <interactionFlowModelElement xsi:type="core:ViewContainer" id="_nPkH0CHsEfC09_PHvSMwwg" name="Profile Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.2/@interactionFlowModelElement.2/@actionEvents.0/@outInteractionFlows.1 //@interactionFlowModel/@interactionFlowModelElements.1/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="/profile"/>
+        <viewElementEvents id="_y7_4ACsnEfCqP_R2azlOKA" name="Edit Profile" viewElement="//@interactionFlowModel/@interactionFlowModelElements.2/@interactionFlowModelElement.0/@viewElements.0">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_1ZLsICsnEfCqP_R2azlOKA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.2/@interactionFlowModelElement.0"/>
+        </viewElementEvents>
         <viewElements xsi:type="ext:Details" id="_pGd_ECHsEfC09_PHvSMwwg" name="Details user">
-          <viewElementEvents id="_kz5EQCdKEfCawJ8zG0FM2w" name="Edit Profile">
-            <outInteractionFlows xsi:type="core:NavigationFlow" id="_puShsCdKEfCawJ8zG0FM2w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.2/@interactionFlowModelElement.0"/>
-          </viewElementEvents>
           <viewComponentParts xsi:type="core:DataBinding" id="_shqTkCHsEfC09_PHvSMwwg" name="User Data" uniformResourceIdentifier="getDetailsUser">
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_z5O-ECHsEfC09_PHvSMwwg" name="name" featureConcept="//@domainModel/@domainElements.70"/>
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_53tusCHsEfC09_PHvSMwwg" name="email" featureConcept="//@domainModel/@domainElements.3"/>
@@ -74,7 +74,7 @@
         <viewElementEvents id="_uP99ICdKEfCawJ8zG0FM2w" name="Add Hotel">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_x9rlACdKEfCawJ8zG0FM2w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.4/@interactionFlowModelElement.1"/>
         </viewElementEvents>
-        <viewElements xsi:type="ext:List" id="_GdXyMCHuEfC09_PHvSMwwg" name="Hotel">
+        <viewElements xsi:type="ext:List" id="_GdXyMCHuEfC09_PHvSMwwg" name="List Hotel">
           <viewElementEvents id="_71JpYCaaEfCQReVb34b6zg" name="View Hotel">
             <outInteractionFlows xsi:type="core:NavigationFlow" id="_ArMyUCabEfCQReVb34b6zg"/>
             <outInteractionFlows xsi:type="core:NavigationFlow" id="_8LXBUCdHEfCawJ8zG0FM2w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.4/@interactionFlowModelElement.3"/>
@@ -121,7 +121,7 @@
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_V5pGACabEfCQReVb34b6zg"/>
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_H2PqMCc_EfCawJ8zG0FM2w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.4/@interactionFlowModelElement.4"/>
         </viewElementEvents>
-        <viewElements xsi:type="ext:List" id="_nv90QCHuEfC09_PHvSMwwg" name="Room">
+        <viewElements xsi:type="ext:List" id="_nv90QCHuEfC09_PHvSMwwg" name="List Room">
           <viewComponentParts xsi:type="core:DataBinding" id="_rZgt0CHuEfC09_PHvSMwwg" name="Room Data" uniformResourceIdentifier="getRoomData">
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_s4GLsCHuEfC09_PHvSMwwg" name="number" featureConcept="//@domainModel/@domainElements.76"/>
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_wqGdsCHuEfC09_PHvSMwwg" name="type" featureConcept="//@domainModel/@domainElements.77"/>
@@ -177,7 +177,7 @@
     <interactionFlowModelElements xsi:type="core:ModuleDefinition" id="_mTM74Cc_EfCawJ8zG0FM2w" name="Search">
       <interactionFlowModelElement xsi:type="core:ViewContainer" id="_juNusCHxEfC09_PHvSMwwg" name="Search Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.5/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="/search"/>
-        <viewElements xsi:type="ext:Form" id="_myszYCHxEfC09_PHvSMwwg" name="Search Form">
+        <viewElements xsi:type="ext:Form" id="_myszYCHxEfC09_PHvSMwwg" name="Search">
           <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_Q9ygICHyEfC09_PHvSMwwg" name="Cari">
             <outInteractionFlows xsi:type="core:NavigationFlow" id="_cCsikCHzEfC09_PHvSMwwg"/>
             <outInteractionFlows xsi:type="core:NavigationFlow" id="_6gt2sCdCEfCawJ8zG0FM2w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.6/@interactionFlowModelElement.2"/>
@@ -196,39 +196,20 @@
             </subViewComponentParts>
             <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </viewComponentParts>
-          <viewComponentParts xsi:type="ext:SimpleField" id="_6Hs5MCHxEfC09_PHvSMwwg" name="date">
-            <annotations text="Required"/>
-            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_98wfMCHxEfC09_PHvSMwwg" name="date">
-              <type xsi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDate"/>
-            </subViewComponentParts>
-            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDate"/>
-          </viewComponentParts>
-          <viewComponentParts xsi:type="ext:SimpleField" id="_CcUawCHyEfC09_PHvSMwwg" name="jumlah tamu">
-            <annotations text="Required"/>
-            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_JoUHYCHyEfC09_PHvSMwwg" name="guest"/>
-          </viewComponentParts>
         </viewElements>
       </interactionFlowModelElement>
       <interactionFlowModelElement xsi:type="core:ViewContainer" id="_UUCDMCHyEfC09_PHvSMwwg" name="Search result Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.6/@interactionFlowModelElement.2/@actionEvents.0/@outInteractionFlows.0">
-        <annotations text="/search/result?name?location?date?guest"/>
-        <viewElements xsi:type="ext:List" id="_WsUJMCHyEfC09_PHvSMwwg" name="Hotel">
-          <parameters id="_f230QCHyEfC09_PHvSMwwg" name="name">
+        <annotations text="/search/result?name&amp;location"/>
+        <viewElements xsi:type="ext:List" id="_WsUJMCHyEfC09_PHvSMwwg" name="List Hotel">
+          <parameters id="_f230QCHyEfC09_PHvSMwwg" name="name" direction="inout">
             <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </parameters>
-          <parameters id="_j9PMsCHyEfC09_PHvSMwwg" name="location">
+          <parameters id="_j9PMsCHyEfC09_PHvSMwwg" name="location" direction="inout">
             <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </parameters>
-          <parameters id="_oa31oCHyEfC09_PHvSMwwg" name="date">
-            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDate"/>
-          </parameters>
-          <parameters id="_rsCEYCHyEfC09_PHvSMwwg" name="guest">
-            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </parameters>
           <viewComponentParts xsi:type="ext:SimpleField" id="_aiE50CHyEfC09_PHvSMwwg" name="Search"/>
           <viewComponentParts xsi:type="core:DataBinding" id="_wcx2kCHyEfC09_PHvSMwwg" name="Search Hotel Data" uniformResourceIdentifier="getDataResult">
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_yro60CHyEfC09_PHvSMwwg" name="NamaHotel" featureConcept="//@domainModel/@domainElements.70"/>
-            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_9c-9gCHyEfC09_PHvSMwwg" name="HargaHotel" featureConcept="//@domainModel/@domainElements.72"/>
-            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_FS80MCHzEfC09_PHvSMwwg" name="HotelPictureUrl"/>
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_NGXtMCHzEfC09_PHvSMwwg" name="LokasiHotel" featureConcept="//@domainModel/@domainElements.71"/>
           </viewComponentParts>
         </viewElements>
@@ -238,19 +219,23 @@
         <actionEvents id="_5NkMwCdCEfCawJ8zG0FM2w">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_7toVwCdCEfCawJ8zG0FM2w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.6/@interactionFlowModelElement.1">
             <parameterBindingGroup id="_EQThcCdDEfCawJ8zG0FM2w">
-              <parameterBindings id="_GJepkCdDEfCawJ8zG0FM2w" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.6/@interactionFlowModelElement.1/@viewElements.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.2/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@subViewComponentParts.0"/>
-              <parameterBindings id="_HcfwoCdDEfCawJ8zG0FM2w" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.6/@interactionFlowModelElement.1/@viewElements.0/@parameters.1" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@interactionFlowModelElement.1/@viewElements.0/@viewComponentParts.1/@subViewComponentParts.0"/>
-              <parameterBindings id="_IB-cQCdDEfCawJ8zG0FM2w" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.6/@interactionFlowModelElement.1/@viewElements.0/@parameters.2" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.6/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.2/@subViewComponentParts.0"/>
-              <parameterBindings id="_Izc8gCdDEfCawJ8zG0FM2w" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.6/@interactionFlowModelElement.1/@viewElements.0/@parameters.3" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.6/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.3/@subViewComponentParts.0"/>
+              <parameterBindings id="_GJepkCdDEfCawJ8zG0FM2w" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.2/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@subViewComponentParts.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.6/@interactionFlowModelElement.1/@viewElements.0/@parameters.0"/>
+              <parameterBindings id="_HcfwoCdDEfCawJ8zG0FM2w" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@interactionFlowModelElement.1/@viewElements.0/@viewComponentParts.1/@subViewComponentParts.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.6/@interactionFlowModelElement.1/@viewElements.0/@parameters.1"/>
             </parameterBindingGroup>
           </outInteractionFlows>
         </actionEvents>
       </interactionFlowModelElement>
     </interactionFlowModelElements>
     <interactionFlowModelElements xsi:type="core:ModuleDefinition" id="_7mk2ECdDEfCawJ8zG0FM2w" name="Booking">
-      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_HtN3wCdEEfCawJ8zG0FM2w" name="Booking Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.3/@actionEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.9/@interactionFlowModelElement.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
-        <annotations text="/hotel/:hotelId/rooms/:roomId/booking"/>
-        <viewElements xsi:type="ext:Form" id="_PWRT0CdEEfCawJ8zG0FM2w" name="Booking Form">
+      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_HtN3wCdEEfCawJ8zG0FM2w" name="Booking Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.3/@actionEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.9/@interactionFlowModelElement.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.11/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="/hotel/:hotelId/rooms/:number/booking"/>
+        <viewElements xsi:type="ext:Form" id="_PWRT0CdEEfCawJ8zG0FM2w" name="Booking">
+          <parameters id="_jkCKUCs5EfCqP_R2azlOKA" name="hotelId" direction="inout">
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </parameters>
+          <parameters id="_qSF9wCs5EfCqP_R2azlOKA" name="number" direction="inout">
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </parameters>
           <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_bINbYCdFEfCawJ8zG0FM2w" name="Send">
             <outInteractionFlows xsi:type="core:NavigationFlow" id="_ojccACdGEfCawJ8zG0FM2w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.2"/>
           </viewElementEvents>
@@ -278,11 +263,17 @@
         </viewElements>
       </interactionFlowModelElement>
       <interactionFlowModelElement xsi:type="core:ViewContainer" id="_pdWU8CdFEfCawJ8zG0FM2w" name="Booking Summary Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.2/@actionEvents.0/@outInteractionFlows.0">
-        <annotations text="/hotel/:hotelId/rooms/booking/summary"/>
+        <annotations text="/hotel/:hotelId/rooms/:number/booking/summary"/>
         <viewElementEvents id="_5IY-kCdSEfCawJ8zG0FM2w" name="Payment">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_83GsACdSEfCawJ8zG0FM2w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.10/@interactionFlowModelElement.0"/>
         </viewElementEvents>
         <viewElements xsi:type="core:ViewComponent" id="_uB9voCdFEfCawJ8zG0FM2w" name="Booking Summary">
+          <parameters id="_IvdicCwnEfC1y6fjbc4KLw" name="hotelId" direction="inout">
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </parameters>
+          <parameters id="_U8AX0CwnEfC1y6fjbc4KLw" name="number">
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </parameters>
           <viewElementEvents xsi:type="ext:OnSelectEvent" id="_s_wPQCdGEfCawJ8zG0FM2w" name="Cancel Booking">
             <outInteractionFlows xsi:type="core:NavigationFlow" id="_40qnwCdGEfCawJ8zG0FM2w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.3"/>
           </viewElementEvents>
@@ -299,13 +290,23 @@
       <interactionFlowModelElement xsi:type="core:IFMLAction" id="_kdeFICdGEfCawJ8zG0FM2w" name="Create Booking" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="POST"/>
         <actionEvents id="_m6YzgCdGEfCawJ8zG0FM2w">
-          <outInteractionFlows xsi:type="core:NavigationFlow" id="_qK9zcCdGEfCawJ8zG0FM2w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.1"/>
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_qK9zcCdGEfCawJ8zG0FM2w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.1">
+            <parameterBindingGroup id="_kbWasCwnEfC1y6fjbc4KLw">
+              <parameterBindings id="_8oZ0kCwnEfC1y6fjbc4KLw" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.9/@interactionFlowModelElement.1/@viewElements.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.9/@interactionFlowModelElement.1/@viewElements.0/@viewComponentParts.0/@parameters.0"/>
+              <parameterBindings id="_9wVtACwnEfC1y6fjbc4KLw" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.1/@viewElements.0/@parameters.1" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.9/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@parameters.0"/>
+            </parameterBindingGroup>
+          </outInteractionFlows>
         </actionEvents>
       </interactionFlowModelElement>
       <interactionFlowModelElement xsi:type="core:IFMLAction" id="_w64oECdGEfCawJ8zG0FM2w" name="Cancel Booking" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="DELETE"/>
         <actionEvents id="_3syZsCdGEfCawJ8zG0FM2w">
-          <outInteractionFlows xsi:type="core:NavigationFlow" id="_54_ykCdGEfCawJ8zG0FM2w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.0"/>
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_54_ykCdGEfCawJ8zG0FM2w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.0">
+            <parameterBindingGroup id="_GaL3sCwoEfC1y6fjbc4KLw">
+              <parameterBindings id="_ILut0CwoEfC1y6fjbc4KLw" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.9/@interactionFlowModelElement.1/@viewElements.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.9/@interactionFlowModelElement.1/@viewElements.0/@viewComponentParts.0/@parameters.0"/>
+              <parameterBindings id="_I9DdECwoEfC1y6fjbc4KLw" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.1/@viewElements.0/@parameters.1" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.9/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@parameters.0"/>
+            </parameterBindingGroup>
+          </outInteractionFlows>
         </actionEvents>
       </interactionFlowModelElement>
     </interactionFlowModelElements>
@@ -316,13 +317,24 @@
       </viewElementEvents>
     </interactionFlowModelElements>
     <interactionFlowModelElements xsi:type="core:ModuleDefinition" id="_uL0kUCdHEfCawJ8zG0FM2w" name="Hotel">
-      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_k9XJwCHuEfC09_PHvSMwwg" name="Room Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.9/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.1">
+      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_k9XJwCHuEfC09_PHvSMwwg" name="Room Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.9/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="/hotel/:hotelId/rooms"/>
-        <viewElements xsi:type="ext:List" id="_nv90QCHuEfC09_PHvSMwwg" name="Room">
-          <viewElementEvents id="__nFr4CdIEfCawJ8zG0FM2w" name="Booking Room">
-            <outInteractionFlows xsi:type="core:NavigationFlow" id="_G4utgCdJEfCawJ8zG0FM2w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.0"/>
+        <viewElements xsi:type="ext:List" id="_nv90QCHuEfC09_PHvSMwwg" name="List Room">
+          <parameters id="__v_EsCsjEfCqP_R2azlOKA" name="hotelId" direction="inout">
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </parameters>
+          <viewElementEvents id="_hl29sCtKEfCqP_R2azlOKA" name="Book Room">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_lQJeICtKEfCqP_R2azlOKA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.0">
+              <parameterBindingGroup id="_oUjqUCtKEfCqP_R2azlOKA">
+                <parameterBindings id="_paL1oCtKEfCqP_R2azlOKA" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.9/@interactionFlowModelElement.1/@viewElements.0/@viewComponentParts.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.9/@interactionFlowModelElement.1/@viewElements.0/@viewComponentParts.0/@parameters.0"/>
+                <parameterBindings id="_sZJhICtKEfCqP_R2azlOKA" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.0/@viewElements.0/@parameters.1" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.9/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@parameters.0"/>
+              </parameterBindingGroup>
+            </outInteractionFlows>
           </viewElementEvents>
           <viewComponentParts xsi:type="core:DataBinding" id="_rZgt0CHuEfC09_PHvSMwwg" name="Room Data" uniformResourceIdentifier="getRoomData">
+            <parameters id="_e7dSICs4EfCqP_R2azlOKA" name="number" direction="inout">
+              <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </parameters>
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_s4GLsCHuEfC09_PHvSMwwg" name="number" featureConcept="//@domainModel/@domainElements.76"/>
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_wqGdsCHuEfC09_PHvSMwwg" name="type" featureConcept="//@domainModel/@domainElements.77"/>
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_0E2GQCHuEfC09_PHvSMwwg" name="price" featureConcept="//@domainModel/@domainElements.72"/>
@@ -332,12 +344,21 @@
       </interactionFlowModelElement>
       <interactionFlowModelElement xsi:type="core:ViewContainer" id="_EZdZsCHuEfC09_PHvSMwwg" name="Hotel Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.8/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="/hotel"/>
-        <viewElements xsi:type="ext:List" id="_GdXyMCHuEfC09_PHvSMwwg" name="Hotel">
-          <viewElementEvents id="_71JpYCaaEfCQReVb34b6zg" name="View Hotel">
-            <outInteractionFlows xsi:type="core:NavigationFlow" id="_ArMyUCabEfCQReVb34b6zg"/>
-            <outInteractionFlows xsi:type="core:NavigationFlow" id="_8LXBUCdHEfCawJ8zG0FM2w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.9/@interactionFlowModelElement.0"/>
+        <viewElements xsi:type="ext:List" id="_GdXyMCHuEfC09_PHvSMwwg" name="List Hotel">
+          <parameters id="_IUP5ACwaEfC1y6fjbc4KLw" name="hotelId" direction="inout">
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </parameters>
+          <viewElementEvents id="_SOFowCwWEfC1y6fjbc4KLw" name="View Hotel">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_UlTXwCwWEfC1y6fjbc4KLw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.9/@interactionFlowModelElement.0">
+              <parameterBindingGroup id="_Wojo8CwWEfC1y6fjbc4KLw">
+                <parameterBindings id="_aVYgACwWEfC1y6fjbc4KLw" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.0/@viewElements.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.9/@interactionFlowModelElement.0/@viewElements.0/@parameters.0"/>
+              </parameterBindingGroup>
+            </outInteractionFlows>
           </viewElementEvents>
           <viewComponentParts xsi:type="core:DataBinding" id="_J_GzkCHuEfC09_PHvSMwwg" name="Data Hotel" uniformResourceIdentifier="getHotelData">
+            <parameters id="_VC_6ECtKEfCqP_R2azlOKA" name="hotelId" direction="out">
+              <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </parameters>
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_PKxnMCHuEfC09_PHvSMwwg" name="name" featureConcept="//@domainModel/@domainElements.70"/>
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_VTU50CHuEfC09_PHvSMwwg" name="location" featureConcept="//@domainModel/@domainElements.71"/>
           </viewComponentParts>
@@ -345,11 +366,15 @@
       </interactionFlowModelElement>
     </interactionFlowModelElements>
     <interactionFlowModelElements xsi:type="core:ModuleDefinition" id="_3N3k4CdNEfCawJ8zG0FM2w" name="Payment">
-      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_BUVekCdOEfCawJ8zG0FM2w" name="Payment Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.1/@viewElementEvents.0/@outInteractionFlows.0">
-        <annotations text="/hotel/:bookingId/payment"/>
+      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_BUVekCdOEfCawJ8zG0FM2w" name="Payment Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.1/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.12/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="/hotel/:hotelId/rooms/:number/booking/:bookingId/payment"/>
         <viewElements xsi:type="ext:Form" id="_Z94AICdOEfCawJ8zG0FM2w" name="Select Payment Method">
           <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_msBJ4CdSEfCawJ8zG0FM2w" name="Send">
-            <outInteractionFlows xsi:type="core:NavigationFlow" id="_tFIoECdSEfCawJ8zG0FM2w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.10/@interactionFlowModelElement.2"/>
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_tFIoECdSEfCawJ8zG0FM2w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.10/@interactionFlowModelElement.2">
+              <parameterBindingGroup id="_gxwrUCzLEfCgkN6vf-joBw">
+                <parameterBindings id="_h5IjECzLEfCgkN6vf-joBw" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.10/@interactionFlowModelElement.1/@viewElements.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.10/@interactionFlowModelElement.0/@viewElements.1/@viewComponentParts.0/@parameters.0"/>
+              </parameterBindingGroup>
+            </outInteractionFlows>
           </viewElementEvents>
           <viewComponentParts xsi:type="ext:SelectionField" id="_eH6-sCdOEfCawJ8zG0FM2w" name="paymentMethod">
             <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -357,15 +382,19 @@
         </viewElements>
         <viewElements xsi:type="core:ViewComponent" id="_6A8pICdQEfCawJ8zG0FM2w" name="Payment">
           <viewComponentParts xsi:type="core:DataBinding" id="_Oat-oCdREfCawJ8zG0FM2w" name="Payment Data" uniformResourceIdentifier="getPaymentData">
-            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_Y0PXMCdREfCawJ8zG0FM2w" name="userId" featureConcept="//@domainModel/@domainElements.1"/>
-            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_f874MCdREfCawJ8zG0FM2w" name="bookingId" featureConcept="//@domainModel/@domainElements.17"/>
+            <parameters id="_ULrxECzKEfCgkN6vf-joBw" name="paymentId" direction="inout">
+              <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </parameters>
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_mMB3sCdREfCawJ8zG0FM2w" name="totalAmount" featureConcept="//@domainModel/@domainElements.52"/>
           </viewComponentParts>
         </viewElements>
       </interactionFlowModelElement>
       <interactionFlowModelElement xsi:type="core:ViewContainer" id="_3zlkQCdREfCawJ8zG0FM2w" name="Payment Status Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.10/@interactionFlowModelElement.2/@actionEvents.0/@outInteractionFlows.0">
-        <annotations text="/hotel/:bookingId/payment/status"/>
+        <annotations text="/hotel/:hotelId/rooms/:number/booking/:bookingId/payment/status"/>
         <viewElements xsi:type="core:ViewComponent" id="__GRHsCdREfCawJ8zG0FM2w" name="Payment Status">
+          <parameters id="_uI2dsCzKEfCgkN6vf-joBw" name="paymentId" direction="inout">
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </parameters>
           <viewComponentParts xsi:type="core:VisualizationAttribute" id="_E8fUMCdSEfCawJ8zG0FM2w" name="status" featureConcept="//@domainModel/@domainElements.23"/>
           <viewComponentParts xsi:type="core:VisualizationAttribute" id="_f874MCdREfCawJ8zG0FM2w" name="bookingId" featureConcept="//@domainModel/@domainElements.17"/>
           <viewComponentParts xsi:type="core:VisualizationAttribute" id="_dX56MCdSEfCawJ8zG0FM2w" name="totalAmount" featureConcept="//@domainModel/@domainElements.52"/>
@@ -377,6 +406,18 @@
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_v-ZUMCdSEfCawJ8zG0FM2w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.10/@interactionFlowModelElement.1"/>
         </actionEvents>
       </interactionFlowModelElement>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_lII7ICwaEfC1y6fjbc4KLw" name="Booking">
+      <annotations text="Booking"/>
+      <viewElementEvents id="_u3yQQCwaEfC1y6fjbc4KLw" name="Booking">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_xr9BACwaEfC1y6fjbc4KLw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.0"/>
+      </viewElementEvents>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_QMEEYCzLEfCgkN6vf-joBw" name="Payment">
+      <annotations text="Payment"/>
+      <viewElementEvents id="_V-umkCzLEfCgkN6vf-joBw" name="Payment">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_YUWaICzLEfCgkN6vf-joBw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.10/@interactionFlowModelElement.0"/>
+      </viewElementEvents>
     </interactionFlowModelElements>
   </interactionFlowModel>
   <domainModel id="_yx8qoSc2EfCawJ8zG0FM2w">
