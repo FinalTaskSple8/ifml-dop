@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<core:IFMLModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.omg.org/spec/20130218/core" xmlns:ext="http://www.omg.org/spec/20130218/ext" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" id="_yx8qoCc2EfCawJ8zG0FM2w">
+<core:IFMLModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.omg.org/spec/20130218/core" xmlns:dop-extension="http://amanah.cs.ui.ac.id/ifml/dop" xmlns:ext="http://www.omg.org/spec/20130218/ext" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" id="_yx8qoCc2EfCawJ8zG0FM2w">
   <interactionFlowModel id="_n8STMCc3EfCawJ8zG0FM2w">
     <interactionFlowModelElements xsi:type="core:ViewContainer" id="_n8VWgCc3EfCawJ8zG0FM2w" name="Home" isXOR="true">
       <annotations text="/"/>
@@ -45,6 +45,9 @@
         <annotations text="/profile"/>
         <viewElementEvents id="_y7_4ACsnEfCqP_R2azlOKA" name="Edit Profile" viewElement="//@interactionFlowModel/@interactionFlowModelElements.2/@interactionFlowModelElement.0/@viewElements.0">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_1ZLsICsnEfCqP_R2azlOKA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.2/@interactionFlowModelElement.0"/>
+        </viewElementEvents>
+        <viewElementEvents id="_1DOL8D7rEfCcQKQOW1PfNA" name="Show MyPoints">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_5J8JsD7rEfCcQKQOW1PfNA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.15/@interactionFlowModelElement.0"/>
         </viewElementEvents>
         <viewElements xsi:type="ext:Details" id="_pGd_ECHsEfC09_PHvSMwwg" name="Details user">
           <viewComponentParts xsi:type="core:DataBinding" id="_shqTkCHsEfC09_PHvSMwwg" name="User Data" uniformResourceIdentifier="getDetailsUser">
@@ -274,7 +277,7 @@
           </outInteractionFlows>
         </actionEvents>
       </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_w64oECdGEfCawJ8zG0FM2w" name="Cancel Booking" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.3/@viewElements.0/@viewElementEvents.3/@outInteractionFlows.0">
+      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_w64oECdGEfCawJ8zG0FM2w" name="Cancel Booking" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.3/@viewElements.0/@viewElementEvents.1/@outInteractionFlows.0">
         <annotations text="DELETE"/>
         <actionEvents id="_3syZsCdGEfCawJ8zG0FM2w">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_54_ykCdGEfCawJ8zG0FM2w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.0">
@@ -285,7 +288,7 @@
           </outInteractionFlows>
         </actionEvents>
       </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_thoYYDPrEfCH1_DXOkKtCA" name="Booking Summary Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.1/@actionEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.5/@actionEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.7/@actionEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.9/@actionEvents.0/@outInteractionFlows.0">
+      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_thoYYDPrEfCH1_DXOkKtCA" name="Booking Summary Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.1/@actionEvents.0/@outInteractionFlows.0">
         <annotations text="/hotel/:hotelId/rooms/:number/booking/summary"/>
         <viewElementEvents id="_gjMhIDPtEfCH1_DXOkKtCA" name="Payment">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_83GsACdSEfCawJ8zG0FM2w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.10/@interactionFlowModelElement.0"/>
@@ -300,17 +303,15 @@
           <parameters id="_eycz4DP7EfCH1_DXOkKtCA" name="bookingId">
             <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </parameters>
-          <viewElementEvents id="_znpe8DPsEfCH1_DXOkKtCA" name="Room Upgrade">
-            <outInteractionFlows xsi:type="core:NavigationFlow" id="_6XDO0DPvEfCH1_DXOkKtCA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.4"/>
-          </viewElementEvents>
-          <viewElementEvents id="_9uzVIDPsEfCH1_DXOkKtCA" name="Additional Services">
-            <outInteractionFlows xsi:type="core:NavigationFlow" id="_X0_WsDP0EfCH1_DXOkKtCA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.6"/>
-          </viewElementEvents>
           <viewElementEvents id="_LSlqQDPtEfCH1_DXOkKtCA" name="Early Check In/Out">
-            <outInteractionFlows xsi:type="core:NavigationFlow" id="_6QcaEDP7EfCH1_DXOkKtCA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.8"/>
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_6QcaEDP7EfCH1_DXOkKtCA"/>
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_TkNZYDbmEfCX9rHDeV2zLQ" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.13/@interactionFlowModelElement.1"/>
           </viewElementEvents>
           <viewElementEvents xsi:type="ext:OnSelectEvent" id="_TEmOADPtEfCH1_DXOkKtCA" name="Cancel Booking">
             <outInteractionFlows xsi:type="core:NavigationFlow" id="_40qnwCdGEfCawJ8zG0FM2w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.2"/>
+          </viewElementEvents>
+          <viewElementEvents id="_nCEzID7wEfCcQKQOW1PfNA" name="Additional Services">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_tYh-4D7wEfCcQKQOW1PfNA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.17/@interactionFlowModelElement.0"/>
           </viewElementEvents>
           <viewComponentParts xsi:type="core:DataBinding" id="_yTJmoDPrEfCH1_DXOkKtCA" name="Booking Summary Data">
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_0S1mcDPrEfCH1_DXOkKtCA" name="hotelId" featureConcept="//@domainModel/@domainElements.75"/>
@@ -319,84 +320,8 @@
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_22vGkDPrEfCH1_DXOkKtCA" name="totalPrice" featureConcept="//@domainModel/@domainElements.22"/>
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_5qXEwDPrEfCH1_DXOkKtCA" name="status" featureConcept="//@domainModel/@domainElements.23"/>
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_7Rrn4DPrEfCH1_DXOkKtCA" name="bookingId" featureConcept="//@domainModel/@domainElements.17"/>
-            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_MM5EcDPvEfCH1_DXOkKtCA" name="upgradedRoomType" featureConcept="//@domainModel/@domainElements.30"/>
-            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_OKxtcDPvEfCH1_DXOkKtCA" name="additionalServices" featureConcept="//@domainModel/@domainElements.44"/>
-            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_M9ztkDP7EfCH1_DXOkKtCA" name="earlyCheckIn" featureConcept="//@domainModel/@domainElements.36"/>
-            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_WTVSgDP7EfCH1_DXOkKtCA" name="lateCheckOut" featureConcept="//@domainModel/@domainElements.39"/>
           </viewComponentParts>
         </viewElements>
-      </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_-KSh0DPtEfCH1_DXOkKtCA" name="Room Upgrade Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.3/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
-        <annotations text="/hotel/:hotelId/rooms/:number/booking/summary/room-upgrade"/>
-        <parameters id="_oxFg4DPzEfCH1_DXOkKtCA" name="bookingId" direction="inout">
-          <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </parameters>
-        <viewElements xsi:type="ext:Form" id="_sIALoDPuEfCH1_DXOkKtCA" name="Room Upgrade">
-          <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_4oR1UDPuEfCH1_DXOkKtCA" name="Send">
-            <outInteractionFlows xsi:type="core:NavigationFlow" id="_IrRiYDPwEfCH1_DXOkKtCA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.5"/>
-          </viewElementEvents>
-          <viewComponentParts xsi:type="ext:SelectionField" id="_t0IWQDPuEfCH1_DXOkKtCA" name="Room Type">
-            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </viewComponentParts>
-        </viewElements>
-      </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_84pB0DPvEfCH1_DXOkKtCA" name="Send Room Upgrade" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.4/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
-        <annotations text="POST"/>
-        <actionEvents id="__R5_QDPvEfCH1_DXOkKtCA">
-          <outInteractionFlows xsi:type="core:NavigationFlow" id="_KJU0wDPwEfCH1_DXOkKtCA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.3">
-            <parameterBindingGroup id="_2pmv4DPzEfCH1_DXOkKtCA">
-              <parameterBindings id="_3h30oDPzEfCH1_DXOkKtCA" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.4/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.6/@parameters.0"/>
-            </parameterBindingGroup>
-          </outInteractionFlows>
-        </actionEvents>
-      </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_Y9YCcDPxEfCH1_DXOkKtCA" name="Additional Service Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.3/@viewElements.0/@viewElementEvents.1/@outInteractionFlows.0">
-        <annotations text="/hotel/:hotelId/rooms/:number/booking/summary/additional-services"/>
-        <parameters id="_xw6ioDPzEfCH1_DXOkKtCA" name="bookingId">
-          <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </parameters>
-        <viewElements xsi:type="ext:Form" id="_uw9qkDPxEfCH1_DXOkKtCA" name="Additional Services">
-          <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_C8ehoDPyEfCH1_DXOkKtCA" name="Send">
-            <outInteractionFlows xsi:type="core:NavigationFlow" id="_zO5ZADPyEfCH1_DXOkKtCA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.7"/>
-          </viewElementEvents>
-          <viewComponentParts xsi:type="ext:SelectionField" id="_v-AsgDPxEfCH1_DXOkKtCA" name="Services">
-            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </viewComponentParts>
-        </viewElements>
-      </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_fTD8sDPyEfCH1_DXOkKtCA" name="Send Additional Services" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.6/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
-        <annotations text="POST"/>
-        <actionEvents id="_qHoSgDPyEfCH1_DXOkKtCA">
-          <outInteractionFlows xsi:type="core:NavigationFlow" id="_0EngEDPyEfCH1_DXOkKtCA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.3">
-            <parameterBindingGroup id="_7VxkEDPzEfCH1_DXOkKtCA">
-              <parameterBindings id="_8a-RkDPzEfCH1_DXOkKtCA" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.4/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.6/@parameters.0"/>
-            </parameterBindingGroup>
-          </outInteractionFlows>
-        </actionEvents>
-      </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_q78AIDP5EfCH1_DXOkKtCA" name="Early CheckIn CheckOut Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.3/@viewElements.0/@viewElementEvents.2/@outInteractionFlows.0">
-        <annotations text="/hotel/:hotelId/rooms/:number/booking/summary/early-checkinout"/>
-        <parameters id="_G2VOcDP6EfCH1_DXOkKtCA" name="bookingId">
-          <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </parameters>
-        <viewElements xsi:type="ext:Form" id="_yAAf0DP5EfCH1_DXOkKtCA" name="Early CheckIn CheckOut">
-          <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_VQRIcDP6EfCH1_DXOkKtCA" name="Send">
-            <outInteractionFlows xsi:type="core:NavigationFlow" id="_oMx1wDP6EfCH1_DXOkKtCA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.9"/>
-          </viewElementEvents>
-          <viewComponentParts xsi:type="ext:SimpleField" id="_34pHIDP5EfCH1_DXOkKtCA" name="CheckIn/CheckOut">
-            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </viewComponentParts>
-        </viewElements>
-      </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_aCwnEDP6EfCH1_DXOkKtCA" name="Send Early CheckIn CheckOut" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.8/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
-        <annotations text="POST"/>
-        <actionEvents id="_mPIdUDP6EfCH1_DXOkKtCA">
-          <outInteractionFlows xsi:type="core:NavigationFlow" id="_rbzWgDP6EfCH1_DXOkKtCA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.3">
-            <parameterBindingGroup id="_2soKgDP6EfCH1_DXOkKtCA">
-              <parameterBindings id="_4PMJcDP6EfCH1_DXOkKtCA" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.4/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.8/@parameters.0"/>
-            </parameterBindingGroup>
-          </outInteractionFlows>
-        </actionEvents>
       </interactionFlowModelElement>
     </interactionFlowModelElements>
     <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_nwh74CdHEfCawJ8zG0FM2w" name="Hotel">
@@ -512,6 +437,97 @@
       <annotations text="Payment"/>
       <viewElementEvents id="_V-umkCzLEfCgkN6vf-joBw" name="Payment">
         <outInteractionFlows xsi:type="core:NavigationFlow" id="_YUWaICzLEfCgkN6vf-joBw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.10/@interactionFlowModelElement.0"/>
+      </viewElementEvents>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="dop-extension:DeltaModuleDefinition" id="_cdGtsDbbEfCX9rHDeV2zLQ" name="Early Check In Late Check Out">
+      <interactionFlowModelElement xsi:type="dop-extension:AddedAction" id="_aSvLEDbfEfCX9rHDeV2zLQ" name="Add Early CheckIn Late CheckOut" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.13/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="POST"/>
+        <actionEvents xsi:type="dop-extension:AddedActionEvent" id="_0Xg7kDbfEfCX9rHDeV2zLQ" name="AddedActionEvent">
+          <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_wQ4ygDbhEfCX9rHDeV2zLQ"/>
+          <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_h0jvADblEfCX9rHDeV2zLQ" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.13/@interactionFlowModelElement.2"/>
+        </actionEvents>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="dop-extension:Delta" id="_NsUq4DbkEfCX9rHDeV2zLQ" name="Early CheckIn CheckOut Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.14/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.3/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.1" uses="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.0">
+        <annotations text="/hotel/:hotelId/rooms/:number/booking/summary/early-checkinout"/>
+        <viewElements xsi:type="dop-extension:ModifiedForm" id="_Yg_9IDbeEfCX9rHDeV2zLQ" name="Early CheckIn Late CheckOut" modifies="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.0/@viewElements.0">
+          <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_3bWgADbfEfCX9rHDeV2zLQ" name="Save">
+            <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_BuMBwDbgEfCX9rHDeV2zLQ" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.13/@interactionFlowModelElement.0"/>
+          </viewElementEvents>
+          <viewComponentParts xsi:type="dop-extension:AddedSelectionField" id="_1NldYDbeEfCX9rHDeV2zLQ" name="Tambah Early CheckIn">
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </viewComponentParts>
+          <viewComponentParts xsi:type="dop-extension:AddedSelectionField" id="_PnGHwDbfEfCX9rHDeV2zLQ" name="Tambah Late CheckOut">
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </viewComponentParts>
+        </viewElements>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="dop-extension:Delta" id="_6mX4QDbkEfCX9rHDeV2zLQ" name="Booking Final Summary Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.13/@interactionFlowModelElement.0/@actionEvents.0/@outInteractionFlows.1" uses="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.3">
+        <annotations text="/hotel/:hotelId/rooms/:number/booking/final-summary"/>
+        <viewElements xsi:type="dop-extension:ModifiedDetail" id="_tMCW4DbgEfCX9rHDeV2zLQ" name="Booking Final Summary" modifies="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.3/@viewElements.0">
+          <viewElementEvents xsi:type="dop-extension:RemovedViewElementEvent" id="_SeLTgDboEfCX9rHDeV2zLQ" name="Removed Early Check In/Out" removes="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.3/@viewElements.0/@viewElementEvents.0"/>
+          <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_7fwUIDbgEfCX9rHDeV2zLQ" name="Booking Final Summary Data" uniformResourceIdentifier="getBookingFinalSummary" modifies="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.3/@viewElements.0/@viewComponentParts.0">
+            <subViewComponentParts xsi:type="dop-extension:AddedVisualizationAttribute" id="_ZT3dIDbhEfCX9rHDeV2zLQ" name="Early CheckIn" featureConcept="//@domainModel/@domainElements.36"/>
+            <subViewComponentParts xsi:type="dop-extension:AddedVisualizationAttribute" id="_mnXTgDbhEfCX9rHDeV2zLQ" name="Late CheckOut" featureConcept="//@domainModel/@domainElements.37"/>
+            <subViewComponentParts xsi:type="dop-extension:AddedVisualizationAttribute" id="_iyvuMDboEfCX9rHDeV2zLQ" name="Early CheckIn Fee" featureConcept="//@domainModel/@domainElements.38"/>
+            <subViewComponentParts xsi:type="dop-extension:AddedVisualizationAttribute" id="_u9IncDboEfCX9rHDeV2zLQ" name="Late CheckOut Fee" featureConcept="//@domainModel/@domainElements.39"/>
+          </viewComponentParts>
+        </viewElements>
+      </interactionFlowModelElement>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_64FIwDbjEfCX9rHDeV2zLQ" name="Early CheckIn Late CheckOut">
+      <annotations text="Early CheckIn Late CheckOut"/>
+      <viewElementEvents xsi:type="dop-extension:AddedViewElementEvent" id="_6fvPUDblEfCX9rHDeV2zLQ" name="Early CheckIn Late CheckOut">
+        <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="__D26wDblEfCX9rHDeV2zLQ" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.13/@interactionFlowModelElement.1"/>
+      </viewElementEvents>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="dop-extension:DeltaModuleDefinition" id="_OlXbYD7qEfCcQKQOW1PfNA" name="points">
+      <interactionFlowModelElement xsi:type="dop-extension:Delta" id="_VTijkD7qEfCcQKQOW1PfNA" name="Profile With Points Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.16/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.2/@interactionFlowModelElement.1/@viewElementEvents.1/@outInteractionFlows.0" uses="//@interactionFlowModel/@interactionFlowModelElements.2/@interactionFlowModelElement.1">
+        <annotations text="/profile/points"/>
+        <viewElements xsi:type="dop-extension:ModifiedDetail" id="_iW_y0D7qEfCcQKQOW1PfNA" name="Profile With Points" modifies="//@interactionFlowModel/@interactionFlowModelElements.2/@interactionFlowModelElement.1/@viewElements.0">
+          <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_6QUYYD7qEfCcQKQOW1PfNA" name="User Data With Points" uniformResourceIdentifier="getUserDataWithPoints" modifies="//@interactionFlowModel/@interactionFlowModelElements.2/@interactionFlowModelElement.1/@viewElements.0/@viewComponentParts.0">
+            <subViewComponentParts xsi:type="dop-extension:AddedVisualizationAttribute" id="_IvQuMD7rEfCcQKQOW1PfNA" name="points" featureConcept="//@domainModel/@domainElements.11"/>
+          </viewComponentParts>
+        </viewElements>
+      </interactionFlowModelElement>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_a1904D7rEfCcQKQOW1PfNA" name="Profile Points">
+      <annotations text="Profile Points"/>
+      <viewElementEvents xsi:type="dop-extension:AddedViewElementEvent" id="_s3KJcD7rEfCcQKQOW1PfNA" name="Profile Points">
+        <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_xKYSID7rEfCcQKQOW1PfNA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.15/@interactionFlowModelElement.0"/>
+      </viewElementEvents>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="dop-extension:DeltaModuleDefinition" id="_ARj3MD7tEfCcQKQOW1PfNA" name="Additional Service">
+      <interactionFlowModelElement xsi:type="dop-extension:Delta" id="_BiEc0D7tEfCcQKQOW1PfNA" name="Additional Service Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.18/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.3/@viewElements.0/@viewElementEvents.2/@outInteractionFlows.0" uses="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.0">
+        <annotations text="/hotel/:hotelId/rooms/:number/booking/summary/additional-services"/>
+        <viewElements xsi:type="dop-extension:ModifiedForm" id="_Uy-s0D7tEfCcQKQOW1PfNA" name="Modified Form" modifies="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.0/@viewElements.0">
+          <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_sM5usD7vEfCcQKQOW1PfNA" name="Save">
+            <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_utgqQD7vEfCcQKQOW1PfNA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.17/@interactionFlowModelElement.2"/>
+          </viewElementEvents>
+          <viewComponentParts xsi:type="dop-extension:AddedSelectionField" id="_0PceQD7uEfCcQKQOW1PfNA" name="Additional Services">
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </viewComponentParts>
+        </viewElements>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="dop-extension:Delta" id="_6mX4QDbkEfCX9rHDeV2zLQ" name="Booking Final Summary Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.17/@interactionFlowModelElement.2/@actionEvents.0/@outInteractionFlows.0" uses="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.3">
+        <annotations text="/hotel/:hotelId/rooms/:number/booking/final-summary"/>
+        <viewElements xsi:type="dop-extension:ModifiedDetail" id="_tMCW4DbgEfCX9rHDeV2zLQ" name="Booking Final Summary" modifies="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.3/@viewElements.0">
+          <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_7fwUIDbgEfCX9rHDeV2zLQ" name="Booking Final Summary Data" uniformResourceIdentifier="getBookingFinalSummary" modifies="//@interactionFlowModel/@interactionFlowModelElements.7/@interactionFlowModelElement.3/@viewElements.0/@viewComponentParts.0">
+            <subViewComponentParts xsi:type="dop-extension:AddedVisualizationAttribute" id="_mnXTgDbhEfCX9rHDeV2zLQ" name="Additional Services" featureConcept="//@domainModel/@domainElements.44"/>
+            <subViewComponentParts xsi:type="dop-extension:AddedVisualizationAttribute" id="_iyvuMDboEfCX9rHDeV2zLQ" name="Additional Services Fee" featureConcept="//@domainModel/@domainElements.45"/>
+          </viewComponentParts>
+        </viewElements>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="dop-extension:AddedAction" id="_i3dpUD7vEfCcQKQOW1PfNA" name="Add Additional Services" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.17/@interactionFlowModelElement.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="POST"/>
+        <actionEvents xsi:type="dop-extension:AddedActionEvent" id="_0vy80D7vEfCcQKQOW1PfNA" name="AddedActionEvent">
+          <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_2lZMgD7vEfCcQKQOW1PfNA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.17/@interactionFlowModelElement.1"/>
+        </actionEvents>
+      </interactionFlowModelElement>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_LTH_0D7wEfCcQKQOW1PfNA" name="Additional Services">
+      <annotations text="Additional Services"/>
+      <viewElementEvents xsi:type="dop-extension:AddedViewElementEvent" id="_OHK0wD7wEfCcQKQOW1PfNA" name="Additional Services">
+        <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TYQT4D7wEfCcQKQOW1PfNA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.17/@interactionFlowModelElement.0"/>
       </viewElementEvents>
     </interactionFlowModelElements>
   </interactionFlowModel>
